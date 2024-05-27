@@ -1,0 +1,40 @@
+{% extends 'admin/base_site.html' %}
+
+{% block content %}
+
+    <h1>Student Placement Information</h1>
+
+    <table style="width: 100%; margin-bottom: 10px;">
+        <thead>
+        <tr>
+            <!-- <td></td> -->
+            <td>Admission Year</td>
+            <td>Single Shot Pass</td>
+            <td>One backlog</td>
+            <td>Double Backlog</td>
+            <td>More than 2 Backlog</td>
+            <td>Total</td>
+            <!-- <td>SNQ</td> -->
+        </tr>
+        </thead>
+        <tbody>
+        {% for items in context.xx %}
+            <tr>
+                <td>{{items.0}}</td>
+                <td>{{items.1.zero_time}}</td>
+                <td>{{items.1.one_time}}</td>
+                <td>{{items.1.two_times}}</td>
+                <td>{{items.1.more_than_two_times}}</td>
+                <td>{{items.1.total}}</td>
+                <!-- <td>{{items.1.1}}</td>
+                <td>{{items.1.2}}</td> -->
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- <p style="font-size: 18px;text-align: end;padding-right: 60px;">
+        Total: 
+    </p> -->
+
+{% endblock %}

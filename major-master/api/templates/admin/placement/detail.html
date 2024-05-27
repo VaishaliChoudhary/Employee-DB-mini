@@ -1,0 +1,35 @@
+{% extends 'admin/base_site.html' %}
+
+{% block content %}
+
+    <h1>Student Placement Information</h1>
+
+    <table style="width: 100%; margin-bottom: 10px;">
+        <thead>
+        <tr>
+            <!-- <td></td> -->
+            <td>Admission Year</td>
+            <td>On Campus</td>
+            <td>Off Campus</td>
+            <td>Internship</td>
+            <!-- <td>SNQ</td> -->
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in context.aggregate %}
+            <tr>
+                <td>{{ item.admission_year }}</td>
+                <td>{{ item.on_campus_count }}</td>
+                <td>{{ item.off_campus_count }}</td>
+                <td>{{ item.internship_count }}</td>
+                <!-- <td>{{ item.snq_count }}</td> -->
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- <p style="font-size: 18px;text-align: end;padding-right: 60px;">
+        Total: 
+    </p> -->
+
+{% endblock %}

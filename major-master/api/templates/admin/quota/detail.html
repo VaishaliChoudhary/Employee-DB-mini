@@ -1,0 +1,35 @@
+{% extends 'admin/base_site.html' %}
+
+{% block content %}
+
+    <h1>Student Quota Information</h1>
+
+    <table style="width: 100%; margin-bottom: 10px;">
+        <thead>
+        <tr>
+            <!-- <td></td> -->
+            <td>Admission Year</td>
+            <td>CET</td>
+            <td>Management</td>
+            <td>Comed-k</td>
+            <td>SNQ</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in context.aggregate %}
+            <tr>
+                <td>{{ item.admission_year }}</td>
+                <td>{{ item.cet_count }}</td>
+                <td>{{ item.management_count }}</td>
+                <td>{{ item.comedk_count }}</td>
+                <td>{{ item.snq_count }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- <p style="font-size: 18px;text-align: end;padding-right: 60px;">
+        Total: 
+    </p> -->
+
+{% endblock %}

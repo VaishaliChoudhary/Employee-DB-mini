@@ -27,12 +27,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-d0y8-%k115bf@a)690xv6+)x(75@xd3%5+r)m5nwt@2r7z+mb5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["employee-mini.herokuapp.com", "127.0.0.1", "localhost",'.vercel.app' , '.now.sh', 'major-s2wx.onrender.com' ]
 
 
 # Application definition
+
 
 INSTALLED_APPS = [
     'api.apps.ApiConfig',
@@ -97,12 +98,14 @@ WSGI_APPLICATION = 'mini.wsgi.application'
 # }
 
 # DATABASES = {'default': dj_database_url.parse('postgres://postgres:Onlyrealfans@123@db.dhoycoriyzxnxhdxvcjk.supabase.co:5432/postgres')}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+DATABASES = {'default':dj_database_url.parse('postgres://telecomdb_user:KXbKNev4El8qZbLhc79CR2X1yNcp38BN@dpg-cpm224ij1k6c739vb04g-a.oregon-postgres.render.com/telecomdb')}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

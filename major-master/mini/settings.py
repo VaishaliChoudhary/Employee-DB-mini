@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-d0y8-%k115bf@a)690xv6+)x(75@xd3%5+r)m5nwt@2r7z+mb5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["employee-mini.herokuapp.com", "127.0.0.1", "localhost",'.vercel.app' , '.now.sh', 'major-s2wx.onrender.com' ]
+ALLOWED_HOSTS = ["employee-mini.herokuapp.com", "127.0.0.1", "localhost",'.vercel.app' , '.now.sh', 'major-s2wx.onrender.com','employee-db-mini-2.onrender.com' ]
 
 
 # Application definition
